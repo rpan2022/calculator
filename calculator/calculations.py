@@ -19,10 +19,10 @@ def add(a: Union[float, int], b: Union[float, int]) -> float:
     """Adds two numbers.
 
     Examples:
-    >>> add(4.0, 2.0)
-    6.0
-    >>> add(4, 2)
-    6.0
+        >>> add(4.0, 2.0)
+        6.0
+        >>> add(4, 2)
+        6.0
 
     Args:
         a (Union[float, int]): The first number to add.
