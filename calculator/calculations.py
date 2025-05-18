@@ -6,16 +6,6 @@ This module allows the user to make mathematical calculations.
 
 The module contains the following functions:
 
-Examples:
-    >>> from calculator import calculations
-    >>> calculations.add(2, 4)
-    6.0
-    >>> calculations.multiply(2.0, 4.0)
-    8.0
-    >>> from calculator.calculations import divide
-    >>> divide(4.0, 2)
-    2.0
-
 - `add(a, b)` - Returns the sum of two numbers.
 - `subtract(a, b)` - Returns the difference of two numbers.
 - `multiply(a, b)` - Returns the product of two numbers.
@@ -27,6 +17,12 @@ from typing import Union
 
 def add(a: Union[float, int], b: Union[float, int]) -> float:
     """Adds two numbers.
+
+    Examples:
+    >>> add(4.0, 2.0)
+    6.0
+    >>> add(4, 2)
+    6.0
 
     Args:
         a (Union[float, int]): The first number to add.
@@ -102,3 +98,7 @@ def divide(a: Union[float, int], b: Union[float, int]) -> float:
     if b == 0:
         raise ZeroDivisionError("division by zero")
     return float(a / b)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
